@@ -37,6 +37,7 @@ public class frm_Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
+        setIconImage(new javax.swing.ImageIcon(getClass().getResource("/br/senac/icones/logo.png")) .getImage());
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
