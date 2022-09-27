@@ -13,10 +13,10 @@ import java.sql.*;//*importa biblioteca inteira
  */
 public class Conexao {
 
-    public static Connection Conector() {
+    public static Connection Conector() {//metodo é usado no frmLogin para realizar a conexao,sendo chamado la
         Connection conexao = null;//variavel conexao
         String driver = "com.mysql.cj.jdbc.Driver";//informação do driver
-        String url = "jdbc:mysql://localhost:3306/senac";//localhost= maquina local pode ser substituido por ip para server,senac é o nome do banco
+        String url = "jdbc:mysql://localhost:3306/senac";//localhost= maquina local pode ser substituido por ip para server,senac é o nome do banco//* modificar a porta para fazer o teste,devera aparecer nao conectado se nao encontrar a conexao.
         String user = "root";//usaurio e
         String password = "123qwe@";//senha passagem por parametro
 

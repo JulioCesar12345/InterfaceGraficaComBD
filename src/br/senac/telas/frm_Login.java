@@ -23,10 +23,10 @@ ResultSet rs = null;//armazena resultada da pre-consulta no banvo
         initComponents();
         conexao = Conexao.Conector();//conexao recebe o metodo conector da classe conexao
         
-        if(conexao!=null){
-            lblStatus.setText("Conectado!");
+        if(conexao!=null){//testa a conexao e diz se funcionou ou não
+            lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senac/icones/dbConectado.png")));
         }else{
-            lblStatus.setText("Erro de Conexão");
+            lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senac/icones/dbConectado.png")));
         }
         
     }
@@ -66,8 +66,6 @@ ResultSet rs = null;//armazena resultada da pre-consulta no banvo
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senac/icones/logo.png"))); // NOI18N
 
-        lblStatus.setText("Status");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -94,8 +92,8 @@ ResultSet rs = null;//armazena resultada da pre-consulta no banvo
                         .addComponent(btnLOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(75, 75, 75))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblStatus)
-                        .addGap(146, 146, 146))))
+                        .addComponent(lblStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(152, 152, 152))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,9 +110,9 @@ ResultSet rs = null;//armazena resultada da pre-consulta no banvo
                 .addComponent(TXTSENHA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnLOGIN)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblStatus)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(lblStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -128,7 +126,7 @@ ResultSet rs = null;//armazena resultada da pre-consulta no banvo
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(385, 373));
+        setSize(new java.awt.Dimension(385, 421));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
